@@ -36,29 +36,52 @@
 // }
 
 
+//FACTORIAL---------------------------------------------------------
+
+// #include<stdio.h>
+// #include<math.h>
+// int fact(int n){
+   
+//         if(n<0){
+//             printf("Enter the valid Whole Number: \n");
+//         }
+//         else if(n==0){
+//        return 1;
+//     }
+
+//     int factofnm1 = fact(n-1);
+//     int factofn=factofnm1*n;
+//     return factofn; 
+// }
+
+// int main(){
+//     int n; 
+//     printf("Enter the number:");
+//     scanf("%d", &n);
+
+//     printf("The factorial of given number is: %d", fact(n));
+// }
 
 #include<stdio.h>
-#include<math.h>
-int fact(int n){
-   
-        if(n<0){
-            printf("Enter the valid Whole Number: \n");
-        }
-        else if(n==0){
-       return 1;
-    }
 
-    int factofnm1 = fact(n-1);
-    int factofn=factofnm1*n;
-    return factofn; 
+int fibo(int n){
+
+   if(n==0) {return 0;}
+   if(n==1) {return 1;}
+   int FofNm1=fibo(n-1); 
+   int FofNm2=fibo(n-2);
+   int FofN= fibo(n-1)+ fibo(n-2);
+//    printf("%d", FofN);
+   return FofN;
 }
 
 int main(){
-    int n; 
-    printf("Enter the number:");
-    scanf("%d", &n);
 
-    printf("The factorial of given number is: %d", fact(n));
+    int n;
+    printf("The Fibonacci of %d is %d\n", n, fibo(n));
+
+    
+return 0;  
 }
 
 
